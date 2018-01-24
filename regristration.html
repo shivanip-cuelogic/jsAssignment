@@ -3,9 +3,12 @@
 <head>
 <title>Regristration page</title>
 <link rel="stylesheet" type="text/css" href="regristration.css">
+<script src="main.js"></script>
+
+
 </head>
 <body>
-    <form name="myform" action=""  method="post" >
+    <form name="myform" id="fo1" action=""  method="post" >
        
         <div class="container">
           <h1>Welcome to TO-DO app</h1>
@@ -14,45 +17,42 @@
         
         
           <label><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
+          <input type="text" placeholder="Enter Email" name="email" id="e" required>
            <br>   
           <label><b>First name</b></label>
-          <input type="text" placeholder="Enter fname" name="fname" required>
+          <input type="text" placeholder="Enter fname" name="fname" id="f" required>
           <br>
           <label><b> Last name</b></label>
-          <input type="text" placeholder="Enter lname" name="lname" required>
+          <input type="text" placeholder="Enter lname" name="lname" id="l" required>
            <br>
           <label><b> Gender</b></label><br>
-          <input type="radio" name="gender" value="male"> Male
-          <input type="radio" name="gender" value="female"> Female<br>
+          <input type="radio" name="gender" value="male" id="g"> Male
+          <input type="radio" name="gender" value="female" id="g"> Female<br>
           
          <br>
             
           <label><b> Address</b></label>
-          <input type="text" placeholder="address" name="address" required>
+          <input type="text" placeholder="address" name="address" id="a" required>
           
             <br>
             <label><b> Upload photo for profile pic</b></label><br>
-            <input type="file" name="pic" accept="image/*">
+            <input type="file" name="pic" id="p" accept="image/*">
             <button type="submit" class="upload">Upload</button>
             <br>
-            <input type="checkbox" checked="checked" style="margin-bottom:15px"> Remember me
+            <input type="checkbox" checked="checked"  style="margin-bottom:15px"> Remember me
           </label>
             <div class="clearfix">
             <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" onclick="return formValidation()" class="signupbtn">Sign Up</button>
+            <button type="submit" onclick="formValidation(event)" class="signupbtn">Sign Up</button>
           </div>
         </div>
       </form>
 
+      
 <script>
-
+ /*  
 // ON submit code....
-function formValidation(){
-    if(validation){
-        retrival();
-    }
-}
+
 
 //main function for regristration page
 function validation(){
@@ -142,20 +142,7 @@ function obj(email,fname,lname,gender,pic,address){
     this.add=address;
 }
 
-var myobj = new obj(email,fname,lname,gender,pic,address);
-console.log('typeof Object: ' + typeof obj);
-console.log('Object properties:');
-for (var prop in obj) {
-    console.log('  ' + prop + ': ' + obj[prop]);
-}
-
-localStorage.setItem('obj', obj);
-
-var retrievedObject = localStorage.getItem('obj');
-console.log('typeof retrievedObject: ' + typeof retrievedObject);
-console.log('Value of retrievedObject: ' + retrievedObject);
-
-
+*/
 </script>
 
 

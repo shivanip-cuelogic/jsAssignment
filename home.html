@@ -1,6 +1,7 @@
 <html>
 <head><title>Home Page</title>
     <link rel="stylesheet" type="text/css" href="home.css">  
+    <script src="home.js"></script>
 </head>    
 <body>
     <div class=section1>
@@ -13,20 +14,27 @@
         <div class="himg">
             <h1>TODAY<p id="today"></p></h1>
         </div>    
-        ad todo here
-    </div>    
+      <h1> ADD TO-DO HERE</h1>
+    </div>
+       
+      <input type="text"  name="todo" id="todo1" >
+      
+      <button onclick="tododata(event)">ADD</button>
+       
 <script>
+function givedate(){
 
-// print date
+
 var d = new Date();
 var dateobj = d.getUTCDate();
 var dayobj = d.getUTCDay();
 var yearobj=d.getUTCFullYear();
 var newdate=dateobj+ "/" +dayobj+ "/" + yearobj;
-document.getElementById("today").innerHTML =  newdate;
+return newdate;
 
-
-
+}
+realdate=givedate();
+document.getElementById("today").innerHTML = realdate;
 
 </script>
 

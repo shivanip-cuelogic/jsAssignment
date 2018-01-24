@@ -2,12 +2,13 @@
     float: left;
    
     width:300px;
+    height: 100%;
     border: 1px solid blue;
 }
 
 .section2{
     float: left;
-    
+    text-align: center;
    
     border: 1px solid blue;
 }
@@ -20,3 +21,11 @@
   text-align: center;
     color:white;
 }
+
+#todo1{
+    border: 1px dotted blue;  
+    width:900px;
+    height:100px;
+   
+}
+
