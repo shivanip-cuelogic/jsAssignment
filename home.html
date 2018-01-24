@@ -1,0 +1,34 @@
+<html>
+<head><title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="home.css">  
+</head>    
+<body>
+    <div class=section1>
+    <h3>welcome</h3><!-- also specify the username/email of user-->
+    <h4><a href="#">Pofile</a></h4>
+    <h4><a href="#">Task Done</a></h4><!--which are moved out of todo -->
+ 
+    </div>   
+    <div class="section2">
+        <div class="himg">
+            <h1>TODAY<p id="today"></p></h1>
+        </div>    
+        ad todo here
+    </div>    
+<script>
+
+// print date
+var d = new Date();
+var dateobj = d.getUTCDate();
+var dayobj = d.getUTCDay();
+var yearobj=d.getUTCFullYear();
+var newdate=dateobj+ "/" +dayobj+ "/" + yearobj;
+document.getElementById("today").innerHTML =  newdate;
+
+
+
+
+</script>
+
+</body>
+</html>

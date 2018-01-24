@@ -1,0 +1,22 @@
+.section1{
+    float: left;
+   
+    width:300px;
+    border: 1px solid blue;
+}
+
+.section2{
+    float: left;
+    
+   
+    border: 1px solid blue;
+}
+
+.himg{
+    background-color:rgba(0,0,0,0.5);
+    width:900px;
+    height:100px;
+    background-size:100px 100px;
+  text-align: center;
+    color:white;
+}
