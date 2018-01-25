@@ -5,6 +5,7 @@ function formValidation(event){
     event.preventDefault();
     if(validation())
     {
+        window.location.href = 'home.html';
         retrival();
 
         return true;
@@ -23,22 +24,24 @@ function validation(){
    // var x1=document.getElementsByTagName("label");
     var y= document.myform.lname;
     var z= document.myform.address;
-     if(allLetter(x))
+    if(username_Validation())
     {
-        if(allLetter(y)) 
+        if(allLetter(x))
         {
-            if( allLetter(z)){
-                if(genderValidation())
-                {
-                    window.location.href = 'home.html';
-                    alert("you are registered successfully");
-                    return true;
+            if(allLetter(y)) 
+            {
+                if( allLetter(z)){
+                    if(genderValidation())
+                    {
+                        
+                        alert("you are registered successfully");
+                        return true;
+                    }
+                
                 }
-             
+                
             }
-            
-        }
-        
+        }   
     }
   return false;
   
@@ -76,7 +79,7 @@ function allLetter(inputtxt)
  //functoin for email validation   
  function username_Validation()
  {
-     var username = document.registration.email;
+     var username = document.getElementById("e");
      var x =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
      if(username.value.match(x))
      {
@@ -103,6 +106,16 @@ alert(email+ " " +fname+ " "+lname+" "+gender+ " " +pic + " "+address);
 
 }
 
+function getdata() {
+    var arr = new Array;// declaring blank array
+    var todos_str = localStorage.getItem('user');
+    if (todos_str !== null) {
+        arr = JSON.parse(todos_str); 
+    }
+    
+    return arr;
+}
+
 function funToPush(email,fname,lname,gender,pic,address){
     var myobj={ "emailid":email,
             "firstname":fname,
@@ -111,14 +124,20 @@ function funToPush(email,fname,lname,gender,pic,address){
             "picture":pic,
             "add":address
             };
+   
+    
 var myJSON = JSON.stringify(myobj);
+arr=getdata();
+arr.push(myJSON);
 
-
-localStorage.setItem('myJSON', myJSON);
+localStorage.setItem('user', JSON.stringify(arr));
 var obj = JSON.parse(localStorage.getItem("myJSON"));
+var obj = JSON.parse(localStorage.getItem("arr"));
 console.log(obj);
 console.log(obj.firstname);
-array.push(obj);
+//array of objects....
+
+
 document.getElementById("fo1").reset();
 }
 

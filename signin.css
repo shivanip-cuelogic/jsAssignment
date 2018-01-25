@@ -1,0 +1,16 @@
+.signinmain{
+background-image:url("imagesforJS/images.jpeg");
+width: 500px;
+height: 500px;
+background-size:500px 500px;
+margin: 0 auto;
+text-align: center;
+}
+.class2{
+padding-top: 150px;
+
+}
+
+h2{
+    color:white;
+}
