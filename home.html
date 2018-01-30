@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head><title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="assests/css files/home.css">  
+    <script src="assests/js files/home.js"></script>
+    <style>
+        .hidden{
+            display:none;
+        }
+        
+        .unhidden{
+            display:block;
+        }
+        </style>
+        <script type="text/javascript">
+        function unhide(clickedButton, divID) {
+            // alert("-->called");
+        var item = document.getElementById(divID);
+        if (item) {
+            if(item.className=='hidden'){
+                item.className = 'unhidden' ;
+                clickedButton.value = 'hide'
+            }else{
+                item.className = 'hidden';
+                clickedButton.value = 'unhide'
+            }
+        }
+        mycurrentuserdetails();
+    }
+        
+        </script>
+
+
+</head>    
+    <body onload="mycurrentuser()">
+        <div class="firstrow">
+                <div class="section1">
+                    <h3>welcome :</h3>    
+                    <h3  id="welcome"></h3><!-- also specify the username/email of user-->
+                    
+                    <h4>Pofile:</h4>
+                    <button onclick="unhide(this, 'profile') " value="unhide"  >view</button>
+                    <div id="profile" class="hidden">
+                    <p>firstname:</p><input type="text"  id="det1" readonly><br>
+                    <p>lastname:</p><input type="text"  id="det2" readonly><br>
+                    <p>address:</p><input type="text"  id="det3" readonly><br>
+                    <p>gender:</p><input type="text" id="det4" readonly><br>
+                    <button onclick="editcontents()">Edit</button>
+                    <button onclick="updatecontent()">Update</button>
+                    </div>
+                    <!-- <h4><a href="#">Task Done</a></h4>which are moved out of todo -->
+                
+                </div>   
+                <div class="section2">
+                    <div class="himg">
+                        <h1>TODAY<p id="today"></p></h1>
+                    </div>    
+                    <h1> ADD TO-DO HERE</h1>
+                
+                </div>
+
+                <button onclick="logout()" id="logout">Log Out</button>
+
+        </div>
+       
+      <!--<input type="text"  name="todo" id="newtodo" >
+      
+       <button onclick="tododata(event)">ADD</button>
+       <p id="alltodos"></p> -->
+       <br>
+            <div class="row2">
+
+                    <div class="opreations">
+                            <button>View all</button><br>
+                            <br>
+                            <button>sory by</button><br>
+                            <br>
+                            <button>Delete</button><br>
+                            <br>
+                            <button>Task Done</button>
+
+                    </div>
+
+                    <table width=400px; height=400px; id="myTable">
+                        <tr>
+                        <th><input id="checkBox" type="checkbox"> </th> 
+                        <th> Date </th> 
+                        <th>Category </th> 
+                        <th>todo</th>  
+                        </tr>   
+                        <tr>
+                                <td><input id="checkBox" type="checkbox" name="checkBox"> </td>
+                                <td><input type="text" name="date"></td>
+                                <td><input type="text" name="category"></td>
+                                <td><input type="text" name="todo"></td>
+                                <!-- <td><input type="button" class="button" value="Add another line" onclick="addField();"></td> -->
+                        </tr>
+                        
+
+
+                    </table>
+
+                    <div class="addnewtodo" >
+                     <form id="addnewtodo">   
+                            <p>Date(dd/mm/yyyy):</p><input type="text"  id="datadate"><br>
+                            <p>Category:</p><select id="datacategory">
+                                    <option value="personal">Personal</option>
+                                    <option value="proffesional">Proffesional</option>
+                                    <option value="urgent">Urgent</option>
+                                    <option value="others">Other</option>
+                                </select><br>
+                            <p>todo:</p><input type="text"  id="datatodo" >
+                            <br>
+                            <br>
+                            <!-- <button onclick="get_data()">ADD</button> -->
+                             <button onclick="addField()">ADD</button> 
+                            <!-- <button onclick="tododata(event)">ADD</button> -->
+                    </form>
+                        </div> 
+
+            </div>   
+<script>
+function givedate(){
+
+
+var d = new Date();
+var dateobj = d.getUTCDate();
+var dayobj = d.getUTCDay();
+var yearobj=d.getUTCFullYear();
+var newdate=dateobj+ "/" +dayobj+ "/" + yearobj;
+return newdate;
+
+}
+realdate=givedate();
+document.getElementById("today").innerHTML = realdate;
+
+</script>
+
+</body>
+</html>

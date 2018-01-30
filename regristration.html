@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Regristration page</title>
+<link rel="stylesheet" type="text/css" href="assests/css files/regristration.css">
+<script src="assests/js files/main.js"></script>
+
+
+</head>
+<body>
+    <form name="myform" id="fo1" action=""  method="post" >
+       
+        <div class="container">
+          <h1>Welcome to TO-DO app</h1>
+          <h4>Please fill in this form to create an account.</h4>
+          <hr>
+        
+        
+          <label><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="e" required>
+           <br>   
+          <label><b>First name</b></label>
+          <input type="text" placeholder="Enter fname" name="fname" id="f" required>
+          <br>
+          <label><b> Last name</b></label>
+          <input type="text" placeholder="Enter lname" name="lname" id="l" required>
+           <br>
+           <label><b> Address</b></label>
+           <input type="text" placeholder="address" name="address" id="a" required>
+           <br>
+          <label><b> Gender</b></label><br>
+          <input type="radio" name="gender" value="male" id="g1"> Male
+          <input type="radio" name="gender" value="female" id="g2"> Female<br>
+          
+       
+            
+         
+          
+            <br>
+            <label><b> Upload photo for profile pic</b></label>
+            <br>
+            <br>
+            <input type="file" name="pic" id="p" accept="image/*">
+            <br>
+            <br>
+            <input type="checkbox" checked="checked"  style="margin-bottom:15px"> Remember me
+          </label>
+            <div class="clearfix">
+            
+            <button type="submit" onclick="formValidation(event)" class="signupbtn">Sign Up</button>
+            <button type="button" class="cancelbtn"  onclick="window.location='signin.html';">sign-in</button>
+          </div>
+        </div>
+      </form>
+
+      
+<script>
+ /*  
+// ON submit code....
+
+
+//main function for regristration page
+function validation(){
+    var x= document.myform.fname;
+    var y= document.myform.lname;
+    var z= document.myform.address;
+     if(allLetter(x))
+    {
+        if(allLetter(y)) 
+        {
+            if( allLetter(z)){
+                if(genderValidation())
+                {
+                    alert("you are registered successfully");
+                    return true;
+                }
+             
+            }
+            
+        }
+        
+    }
+  return false;
+  
+
+}
+
+// function for fname, lname, address
+function allLetter(inputtxt)
+      { 
+      var letters = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(letters))
+      {
+      return true;
+      }
+      else
+      {
+      
+      alert('Please input alphabet characters only in name');
+      return false;
+      }
+      }
+//functiion for validation of gender
+      function genderValidation(){
+        var radios = document.getElementsByName("gender");
+   
+        for (var i = 0, len = radios.length; i < len; i++) {
+             if (radios[i].checked) {
+                 return true;
+             }
+        }
+        alert('select atleast one of the gender');
+        return false;
+        
+    }
+ //functoin for email validation   
+ function username_Validation()
+ {
+     var username = document.registration.email;
+     var x =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+     if(username.value.match(x))
+     {
+         return true;
+     }
+     else{
+         alert("Invalid email");
+         return false;
+     }
+ }
+
+//get values of fields...
+function retrival(){
+var email = document.getElementById("email");
+var fname = document.getElementById("fname");
+var lname = document.getElementById("lname");
+var gender = document.getElementById("gender");
+var pic = document.getElementById("pic");
+var address = document.getElementById("address");
+}
+//create JSON object using constructor
+function obj(email,fname,lname,gender,pic,address){
+    this.emailid=email;
+    this.firstname=fname;
+    this.lastname=lname;
+    this.genderg=gender;
+    this.photo=pic;
+    this.add=address;
+}
+
+*/
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
